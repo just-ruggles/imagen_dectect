@@ -30,7 +30,7 @@ st.markdown(
 
     /* Encabezados y sub-encabezados */
     h2, h3 {
-        color: #00BFFF !important;  /* Azul brillante */
+        color: blue !important;  
     }
     </style>
     """,
