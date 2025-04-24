@@ -8,9 +8,23 @@ import sys
 
 # Configuración de página Streamlit
 st.set_page_config(
-    page_title="Detección de Objetos en Tiempo Real",
+    page_title="FNSM App: Detección de Objetos en Tiempo Real",
     page_icon="🔍",
     layout="wide"
+)
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://wallpapers.com/images/hd/black-carbon-fiber-1biekffyzs37csto.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
 # Función para cargar el modelo YOLOv5 de manera compatible con versiones anteriores de PyTorch
@@ -63,6 +77,7 @@ def load_yolov5_model(model_path='yolov5s.pt'):
 st.title("🔍 Detección de Objetos en Imágenes")
 st.markdown("""
 Esta aplicación utiliza YOLOv5 para detectar objetos en imágenes capturadas con tu cámara.
+Esto es muy importante a la hora de detectar misiles como Spider-mans que somos ;)
 Ajusta los parámetros en la barra lateral para personalizar la detección.
 """)
 
