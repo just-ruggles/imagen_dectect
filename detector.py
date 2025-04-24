@@ -22,10 +22,21 @@ st.markdown(
         background-position: center;
         background-attachment: fixed;
     }
+
+    /* Título principal */
+    h1 {
+        color: red !important;
+    }
+
+    /* Encabezados y sub-encabezados */
+    h2, h3 {
+        color: #00BFFF !important;  /* Azul brillante */
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # Función para cargar el modelo YOLOv5 de manera compatible con versiones anteriores de PyTorch
 @st.cache_resource
@@ -74,7 +85,7 @@ def load_yolov5_model(model_path='yolov5s.pt'):
         return None
 
 # Título y descripción de la aplicación
-st.title("🔍 Detección de Objetos en Imágenes")
+st.title("FNSM App: Detección de Objetos en Tiempo Real")
 st.markdown("""
 Esta aplicación utiliza YOLOv5 para detectar objetos en imágenes capturadas con tu cámara.
 Esto es muy importante a la hora de detectar misiles como Spider-mans que somos ;)
